@@ -1,11 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Home from './components/home';
 
-class HelloMessage extends React.Component {
+
+
+class NumberConverter extends React.Component {
   render() {
-    return <div><h1>Hello {this.props.name}</h1></div>;
+    return (
+        <Router>
+            <div>
+                <Home />
+            </div>
+        </Router>
+    )
   }
 }
 
 var mountNode = document.getElementById("app");
-ReactDOM.render(<HelloMessage name="Jane" />, mountNode);
+ReactDOM.render(<NumberConverter />, mountNode);
